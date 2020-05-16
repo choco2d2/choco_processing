@@ -16,11 +16,8 @@ void setup(){
   smooth();
   
   setup_music();
-  
   draw_circle = new Draw_circle();
-  
   h = new HandyRenderer(this);
-
 }
 
 void draw(){
