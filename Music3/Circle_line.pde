@@ -4,7 +4,7 @@ class Draw_circle{
     stroke(lerpColor(c1, c2, map(song.mix.level(), 0, 0.03, 0, 1)));
     strokeWeight(2.0);
     
-    //right
+    //RightLine
     for(int i = 0; i <= fft.specSize() / 2; i++){
       float r = song.right.level();
       float angle = HALF_PI - map(i, 0, fft.specSize() / 2, 0, PI) * r;
@@ -12,7 +12,7 @@ class Draw_circle{
       line(radious * cos(angle), radious * sin(angle), (radious + len) * cos(angle), (radious + len) * sin(angle));
     }
     
-    //left
+    //LeftLine
     for(int i = 0; i <= fft.specSize() / 2; i++){
       float l = song.left.level();
       float angle = HALF_PI + map(i, 0, fft.specSize() / 2, 0, PI) * l;
